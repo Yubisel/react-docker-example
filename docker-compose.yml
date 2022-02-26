@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  app:
+    container_name: example-react-docker-app
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./src:/app/src
+    ports:
+      - "3000:3000"
